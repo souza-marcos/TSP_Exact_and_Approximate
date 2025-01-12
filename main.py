@@ -1,5 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import time
+import tracemalloc
+import heapq
 
 limDigits = 6
 
