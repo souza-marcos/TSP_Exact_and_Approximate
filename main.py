@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 
 limDigits = 6
 
+class ExecutionTimeoutError(Exception):
+    '''Erro lançado caso o programa demore mais que 30min'''
+    pass
+
 def readInputFile(filename: str) -> list[tuple[float, float]]:
     ''' Lê um arquivo de entrada no formato .tsp e retorna uma lista de tuplas (x, y) com as posições dos pontos
     '''
@@ -44,6 +48,95 @@ def plotGraph(G : nx.Graph, axis : plt.Axes, title=""):
     weightLabels = nx.get_edge_attributes(G, 'weight')
     weightLabels = {k: round(v, limDigits) for k, v in weightLabels.items()}
     nx.draw_networkx_edge_labels(G, pos, weightLabels, ax=axis)
+
+def BNB_TSP(graph, timeout=1800):
+    '''Função para o algoritmo Branch and Bound Completo'''
+
+    class Node:
+        '''Nó para a árvore do bnb'''
+
+        def __init__(self, level, path, cost, bound):
+            self.level = level
+            self.path = path
+            self.cost = cost
+            self.bound = bound
+
+        def __lt__(self, other):
+            return  self.level > other.level or (self.level == other.level and self.bound < other.bound)
+
+
+    class BranchAndBoundTree:
+        '''Árvore do algoritmo BNB'''
+
+        def __init__(self, graph, timeout):
+            self.graph = graph
+            self.timeout = timeout
+            self.n = graph.number_of_nodes()
+            self.best_cost = float('inf')
+            self.best_path = []
+
+        def calculate_bound(self, node):
+            bound = node.cost
+
+            for i in range(self.n):
+                if i not in node.path:
+                    min_cost = float('inf')
+                    for j in range(self.n):
+                        if i != j and j not in node.path:
+                            if self.graph.has_edge(i, j):
+                                min_cost = min(min_cost, self.graph[i][j]['weight'])
+                    if min_cost < float('inf'):
+                        bound += min_cost
+
+            return bound
+
+        def branch_and_bound(self):
+            '''Função que executa o Branch and Bound'''
+
+            start_time = time.time() # início da coleta de uso de tempo 
+            tracemalloc.start()  # Início da coleta de uso da memória
+
+            pq = []  # Fila de Prioridades
+
+            root = Node(0, [0], 0, 0)
+            root.bound = self.calculate_bound(root)
+            heapq.heappush(pq, root)
+
+            while pq:
+
+                if time.time() - start_time > self.timeout:
+                    raise ExecutionTimeoutError("Execução excedeu o tempo limite de 30 minutos.")
+
+                node = heapq.heappop(pq)
+
+                if node.bound < self.best_cost:
+                    for i in range(self.n):
+                        if i not in node.path:
+                            if self.graph.has_edge(node.path[-1], i):
+                                new_cost = node.cost + self.graph[node.path[-1]][i]['weight']
+                                new_path = node.path + [i]
+
+                                if len(new_path) == self.n:
+                                    total_cost = new_cost + self.graph[new_path[-1]][0]['weight']
+                                    if total_cost < self.best_cost:
+                                        self.best_cost = total_cost
+                                        self.best_path = new_path
+                                else:
+                                    child_node = Node(node.level + 1, new_path, new_cost, 0)
+                                    child_node.bound = self.calculate_bound(child_node)
+
+                                    if child_node.bound < self.best_cost:
+                                        heapq.heappush(pq, child_node)
+            
+            current_memory, peak_memory = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            return self.best_cost, self.best_path, elapsed_time, current_memory, peak_memory
+        
+    bnb = BranchAndBoundTree(graph, timeout)
+    min_cost, optimal_path, elapsed_time, current_memory, peak_memory = bnb.branch_and_bound()
+    return min_cost, optimal_path, elapsed_time, current_memory, peak_memory
     
     
 def twiceAroundTree(G : nx.Graph, start: int, toPlot=False):
@@ -149,6 +242,119 @@ def getExampleGraph():
     G.add_edge(2, 4, weight=11)
     G.add_edge(3, 4, weight=7)
     return G    
+
+'''Instâncias para o TSP e seus respectivos valores ótimos'''
+data = [
+("eil51", 426), 
+("berlin52", 7542), 
+("st70", 675), 
+("eil76", 538), 
+("pr76", 108159), 
+("rat99", 1211), 
+("kroA100", 21282), 
+("kroB100", 22141), 
+("kroC100", 20749), 
+("kroD100", 21294), 
+("kroE100", 22068), 
+("rd100", 7910), 
+("eil101", 629), 
+("lin105", 14379), 
+("pr107", 44303), 
+("pr124", 59030), 
+("bier127", 118282), 
+("ch130", 6110), 
+("pr136", 96772), 
+("pr144", 58537), 
+("ch150", 6528), 
+("kroA150", 26524), 
+("kroB150", 26130), 
+("pr152", 73682), 
+("u159", 42080), 
+("rat195", 2323), 
+("d198", 15780), 
+("kroA200", 29368), 
+("kroB200", 29437), 
+("ts225", 126643), 
+("tsp225", 3919), 
+("pr226", 80369), 
+("gil262", 2378), 
+("pr264", 49135), 
+("a280", 2579), 
+("pr299", 48191), 
+("lin318", 42029), 
+("linhp318", 41345), 
+("rd400", 15281), 
+("fl417", 11861), 
+("pr439", 107217), 
+("pcb442", 50778), 
+("d493", 35002), 
+("u574", 36905), 
+("rat575", 6773), 
+("p654", 34643), 
+("d657", 48912), 
+("u724", 41910), 
+("rat783", 8806), 
+("pr1002", 259045), 
+("u1060", 224094), 
+("vm1084", 239297), 
+("pcb1173", 56892), 
+("d1291", 50801), 
+("rl1304", 252948), 
+("rl1323", 270199), 
+("nrw1379", 56638), 
+("fl1400", 20127), 
+("u1432", 152970), 
+("fl1577", 22249), 
+("d1655", 62128), 
+("vm1748", 336556), 
+("u1817", 57201), 
+("rl1889", 316536), 
+("d2103", 80450), 
+("u2152", 64253), 
+("u2319", 234256), 
+("pr2392", 378032), 
+("pcb3038", 137694), 
+("fl3795", 28772), 
+("fnl4461", 182566), 
+("rl5915", 565530), 
+("rl5934", 556045), 
+("rl11849", 923368), 
+("usa13509", 19982889), 
+("brd14051", 469445), 
+("d15112", 1573152), 
+("d18512", 645488)
+]
+
+'''Função que Executa o Branch-and-Bound para todas as instâncias do TSP'''
+def bnb_execute():
+    for tsp_file, optimum in data:
+
+        # Ler os dados e construir o grafo
+        positions = readInputFile(f"input/{tsp_file}.tsp")
+        G = buildGraph(positions)
+
+        try:
+            # Executar a função Branch and Bound
+            min_cost, optimal_path, elapsed_time, current_memory, peak_memory = BNB_TSP(G)
+            
+            # Salvar os resultados em arquivo de saída
+            with open(f'output/{tsp_file}_bnb.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Custo Ótimo da Instância: {optimum}\n")
+                f.write(f"Custo Encontrado: {min_cost}\n")
+                f.write(f"Caminho Encontrado: {optimal_path}\n")
+                f.write(f"Tempo Decorrido: {elapsed_time:.2f} segundos\n")
+                f.write(f"Memória Atual: {current_memory / 10**6:.2f} MB\n")
+                f.write(f"Memória de Pico: {peak_memory / 10**6:.2f} MB\n")
+                
+            print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_bnb.txt'}")
+
+        except ExecutionTimeoutError as e:
+            with open(f'output/{tsp_file}_bnb.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write(str(e) + "\n")
+            
+            print(f"Timeout ao processar {tsp_file}: {e}")
 
 def main():
     # G = buildGraph(readInputFile("input/berlin52.tsp"))
