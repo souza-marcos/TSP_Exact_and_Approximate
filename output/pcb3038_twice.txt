@@ -1,0 +1,7 @@
+Instancia: pcb3038
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 137694
+Custo Encontrado: 196573.89922196095
+Tempo Decorrido: 48.08 segundos
+Memoria Atual: 3.67 MB
+Memoria de Pico: 482.63 MB

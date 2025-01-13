@@ -1,0 +1,7 @@
+Instancia: vm1084
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 239297
+Custo Encontrado: 315268.3487491507
+Tempo Decorrido: 5.23 segundos
+Memoria Atual: 1.34 MB
+Memoria de Pico: 61.70 MB

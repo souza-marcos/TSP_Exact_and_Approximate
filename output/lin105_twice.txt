@@ -1,0 +1,7 @@
+Instancia: lin105
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 14379
+Custo Encontrado: 19498.408788813624
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.19 MB
+Memoria de Pico: 0.45 MB

@@ -1,0 +1,7 @@
+Instancia: fl417
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 11861
+Custo Encontrado: 16297.174640391935
+Tempo Decorrido: 0.67 segundos
+Memoria Atual: 0.62 MB
+Memoria de Pico: 8.95 MB

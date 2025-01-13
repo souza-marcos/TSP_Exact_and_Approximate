@@ -1,0 +1,7 @@
+Instancia: u1817
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 57201
+Custo Encontrado: 83501.55577440909
+Tempo Decorrido: 15.05 segundos
+Memoria Atual: 2.18 MB
+Memoria de Pico: 172.15 MB

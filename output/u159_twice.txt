@@ -1,0 +1,7 @@
+Instancia: u159
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 42080
+Custo Encontrado: 57787.974410195486
+Tempo Decorrido: 0.08 segundos
+Memoria Atual: 0.27 MB
+Memoria de Pico: 1.20 MB

@@ -1,0 +1,7 @@
+Instancia: ch130
+Algoritmo: Christofides
+Custo Otimo da Instancia: 6110
+Custo Encontrado: 6752.275865213126
+Tempo Decorrido: 0.34 segundos
+Memoria Atual: 1.03 MB
+Memoria de Pico: 1.03 MB

@@ -1,0 +1,7 @@
+Instancia: u2152
+Algoritmo: Christofides
+Custo Otimo da Instancia: 64253
+Custo Encontrado: 73895.98896908552
+Tempo Decorrido: 286.18 segundos
+Memoria Atual: 114.70 MB
+Memoria de Pico: 241.74 MB

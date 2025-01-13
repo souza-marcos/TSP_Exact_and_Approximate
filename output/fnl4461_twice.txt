@@ -1,0 +1,7 @@
+Instancia: fnl4461
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 182566
+Custo Encontrado: 254671.62750690823
+Tempo Decorrido: 118.53 segundos
+Memoria Atual: 5.00 MB
+Memoria de Pico: 1044.83 MB

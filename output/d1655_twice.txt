@@ -1,0 +1,7 @@
+Instancia: d1655
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 62128
+Custo Encontrado: 85681.0784168341
+Tempo Decorrido: 12.18 segundos
+Memoria Atual: 1.96 MB
+Memoria de Pico: 143.64 MB

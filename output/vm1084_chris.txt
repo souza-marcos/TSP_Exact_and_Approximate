@@ -1,0 +1,7 @@
+Instancia: vm1084
+Algoritmo: Christofides
+Custo Otimo da Instancia: 239297
+Custo Encontrado: 260833.0616257126
+Tempo Decorrido: 70.33 segundos
+Memoria Atual: 40.21 MB
+Memoria de Pico: 61.69 MB

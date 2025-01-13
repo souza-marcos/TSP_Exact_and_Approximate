@@ -1,0 +1,7 @@
+Instancia: d2103
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 80450
+Custo Encontrado: 124533.87160392563
+Tempo Decorrido: 20.43 segundos
+Memoria Atual: 2.45 MB
+Memoria de Pico: 231.73 MB

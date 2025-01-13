@@ -1,0 +1,7 @@
+Instancia: bier127
+Algoritmo: Christofides
+Custo Otimo da Instancia: 118282
+Custo Encontrado: 132456.24599032826
+Tempo Decorrido: 0.36 segundos
+Memoria Atual: 1.78 MB
+Memoria de Pico: 1.78 MB

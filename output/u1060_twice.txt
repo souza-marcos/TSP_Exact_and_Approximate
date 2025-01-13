@@ -1,0 +1,7 @@
+Instancia: u1060
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 224094
+Custo Encontrado: 302914.8663669418
+Tempo Decorrido: 5.17 segundos
+Memoria Atual: 1.31 MB
+Memoria de Pico: 58.64 MB

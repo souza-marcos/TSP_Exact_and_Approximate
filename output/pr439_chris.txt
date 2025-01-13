@@ -1,0 +1,7 @@
+Instancia: pr439
+Algoritmo: Christofides
+Custo Otimo da Instancia: 107217
+Custo Encontrado: 119532.0359030051
+Tempo Decorrido: 4.88 segundos
+Memoria Atual: 6.26 MB
+Memoria de Pico: 9.98 MB

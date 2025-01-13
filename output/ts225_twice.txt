@@ -1,0 +1,7 @@
+Instancia: ts225
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 126643
+Custo Encontrado: 188009.70162933244
+Tempo Decorrido: 0.16 segundos
+Memoria Atual: 0.37 MB
+Memoria de Pico: 2.54 MB

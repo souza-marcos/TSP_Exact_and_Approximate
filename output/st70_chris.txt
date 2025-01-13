@@ -1,0 +1,7 @@
+Instancia: st70
+Algoritmo: Christofides
+Custo Otimo da Instancia: 675
+Custo Encontrado: 756.7061167632661
+Tempo Decorrido: 0.08 segundos
+Memoria Atual: 0.51 MB
+Memoria de Pico: 0.51 MB

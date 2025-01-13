@@ -1,0 +1,7 @@
+Instancia: u159
+Algoritmo: Christofides
+Custo Otimo da Instancia: 42080
+Custo Encontrado: 47581.71632624036
+Tempo Decorrido: 0.29 segundos
+Memoria Atual: 1.68 MB
+Memoria de Pico: 1.68 MB

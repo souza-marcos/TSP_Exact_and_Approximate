@@ -1,0 +1,7 @@
+Instancia: ch150
+Algoritmo: Christofides
+Custo Otimo da Instancia: 6528
+Custo Encontrado: 7112.036891270508
+Tempo Decorrido: 0.27 segundos
+Memoria Atual: 0.74 MB
+Memoria de Pico: 1.10 MB

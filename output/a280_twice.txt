@@ -1,0 +1,7 @@
+Instancia: a280
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 2579
+Custo Encontrado: 3629.7203051092397
+Tempo Decorrido: 0.29 segundos
+Memoria Atual: 0.46 MB
+Memoria de Pico: 4.16 MB

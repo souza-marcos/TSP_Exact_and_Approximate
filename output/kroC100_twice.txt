@@ -1,0 +1,7 @@
+Instancia: kroC100
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 20749
+Custo Encontrado: 27966.54136375163
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.20 MB
+Memoria de Pico: 0.40 MB

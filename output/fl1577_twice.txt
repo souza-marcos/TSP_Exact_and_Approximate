@@ -1,0 +1,7 @@
+Instancia: fl1577
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 22249
+Custo Encontrado: 31223.096666973648
+Tempo Decorrido: 10.98 segundos
+Memoria Atual: 1.96 MB
+Memoria de Pico: 130.00 MB

@@ -1,0 +1,7 @@
+Instancia: pcb1173
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 56892
+Custo Encontrado: 80694.8928627429
+Tempo Decorrido: 6.22 segundos
+Memoria Atual: 1.42 MB
+Memoria de Pico: 72.00 MB

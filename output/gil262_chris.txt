@@ -1,0 +1,7 @@
+Instancia: gil262
+Algoritmo: Christofides
+Custo Otimo da Instancia: 2378
+Custo Encontrado: 2695.15432713288
+Tempo Decorrido: 2.92 segundos
+Memoria Atual: 4.60 MB
+Memoria de Pico: 4.60 MB

@@ -1,0 +1,7 @@
+Instancia: u574
+Algoritmo: Christofides
+Custo Otimo da Instancia: 36905
+Custo Encontrado: 41337.60957541716
+Tempo Decorrido: 24.00 segundos
+Memoria Atual: 17.43 MB
+Memoria de Pico: 17.43 MB

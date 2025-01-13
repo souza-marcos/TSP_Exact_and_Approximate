@@ -1,0 +1,7 @@
+Instancia: berlin52
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 7542
+Custo Encontrado: 10116.014495510826
+Tempo Decorrido: 0.01 segundos
+Memoria Atual: 0.06 MB
+Memoria de Pico: 0.06 MB

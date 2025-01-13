@@ -1,0 +1,7 @@
+Instancia: u574
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 36905
+Custo Encontrado: 49083.15193822763
+Tempo Decorrido: 1.35 segundos
+Memoria Atual: 0.76 MB
+Memoria de Pico: 17.20 MB

@@ -1,0 +1,7 @@
+Instancia: pr2392
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 378032
+Custo Encontrado: 523132.9069393881
+Tempo Decorrido: 31.28 segundos
+Memoria Atual: 2.73 MB
+Memoria de Pico: 299.23 MB

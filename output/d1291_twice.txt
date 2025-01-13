@@ -1,0 +1,7 @@
+Instancia: d1291
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 50801
+Custo Encontrado: 74658.29731002661
+Tempo Decorrido: 7.43 segundos
+Memoria Atual: 1.51 MB
+Memoria de Pico: 86.71 MB

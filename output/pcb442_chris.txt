@@ -1,0 +1,7 @@
+Instancia: pcb442
+Algoritmo: Christofides
+Custo Otimo da Instancia: 50778
+Custo Encontrado: 54823.987234395485
+Tempo Decorrido: 9.13 segundos
+Memoria Atual: 12.06 MB
+Memoria de Pico: 12.06 MB

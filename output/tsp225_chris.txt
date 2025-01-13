@@ -1,0 +1,7 @@
+Instancia: tsp225
+Algoritmo: Christofides
+Custo Otimo da Instancia: 3919
+Custo Encontrado: 4376.002889600349
+Tempo Decorrido: 1.28 segundos
+Memoria Atual: 1.63 MB
+Memoria de Pico: 2.54 MB

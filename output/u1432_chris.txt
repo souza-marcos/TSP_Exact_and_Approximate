@@ -1,0 +1,7 @@
+Instancia: u1432
+Algoritmo: Christofides
+Custo Otimo da Instancia: 152970
+Custo Encontrado: 171558.08218860067
+Tempo Decorrido: 137.44 segundos
+Memoria Atual: 85.69 MB
+Memoria de Pico: 106.98 MB

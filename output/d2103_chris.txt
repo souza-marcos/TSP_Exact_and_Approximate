@@ -1,0 +1,7 @@
+Instancia: d2103
+Algoritmo: Christofides
+Custo Otimo da Instancia: 80450
+Custo Encontrado: 84509.81497317906
+Tempo Decorrido: 25.55 segundos
+Memoria Atual: 11.93 MB
+Memoria de Pico: 231.73 MB

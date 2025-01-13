@@ -1,0 +1,7 @@
+Instancia: rl5915
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 565530
+Custo Encontrado: 840348.3558001819
+Tempo Decorrido: 231.04 segundos
+Memoria Atual: 7.01 MB
+Memoria de Pico: 1823.01 MB

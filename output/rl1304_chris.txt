@@ -1,0 +1,7 @@
+Instancia: rl1304
+Algoritmo: Christofides
+Custo Otimo da Instancia: 252948
+Custo Encontrado: 278319.19310530246
+Tempo Decorrido: 34.32 segundos
+Memoria Atual: 21.14 MB
+Memoria de Pico: 89.17 MB

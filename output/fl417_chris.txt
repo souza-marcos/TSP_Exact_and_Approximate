@@ -1,0 +1,7 @@
+Instancia: fl417
+Algoritmo: Christofides
+Custo Otimo da Instancia: 11861
+Custo Encontrado: 13424.734306822817
+Tempo Decorrido: 4.57 segundos
+Memoria Atual: 6.32 MB
+Memoria de Pico: 8.95 MB

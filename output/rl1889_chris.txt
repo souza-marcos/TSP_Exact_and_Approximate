@@ -1,0 +1,7 @@
+Instancia: rl1889
+Algoritmo: Christofides
+Custo Otimo da Instancia: 316536
+Custo Encontrado: 344565.8467312751
+Tempo Decorrido: 106.26 segundos
+Memoria Atual: 50.25 MB
+Memoria de Pico: 186.66 MB

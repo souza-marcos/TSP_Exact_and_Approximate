@@ -1,0 +1,7 @@
+Instancia: eil76
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 538
+Custo Encontrado: 707.1533198611806
+Tempo Decorrido: 0.02 segundos
+Memoria Atual: 0.13 MB
+Memoria de Pico: 0.17 MB

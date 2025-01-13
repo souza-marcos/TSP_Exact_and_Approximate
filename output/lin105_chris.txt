@@ -1,0 +1,7 @@
+Instancia: lin105
+Algoritmo: Christofides
+Custo Otimo da Instancia: 14379
+Custo Encontrado: 16323.675799681514
+Tempo Decorrido: 0.24 segundos
+Memoria Atual: 0.75 MB
+Memoria de Pico: 0.75 MB

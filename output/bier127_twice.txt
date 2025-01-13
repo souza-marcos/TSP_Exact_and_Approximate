@@ -1,0 +1,7 @@
+Instancia: bier127
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 118282
+Custo Encontrado: 158637.60615918832
+Tempo Decorrido: 0.05 segundos
+Memoria Atual: 0.27 MB
+Memoria de Pico: 0.72 MB

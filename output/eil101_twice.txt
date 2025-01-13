@@ -1,0 +1,7 @@
+Instancia: eil101
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 629
+Custo Encontrado: 830.5422075548881
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.21 MB
+Memoria de Pico: 0.41 MB

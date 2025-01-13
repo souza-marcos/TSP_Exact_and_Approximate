@@ -1,0 +1,7 @@
+Instancia: rat783
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 8806
+Custo Encontrado: 12054.453156740949
+Tempo Decorrido: 2.64 segundos
+Memoria Atual: 1.04 MB
+Memoria de Pico: 32.02 MB

@@ -1,0 +1,7 @@
+Instancia: kroB100
+Algoritmo: Christofides
+Custo Otimo da Instancia: 22141
+Custo Encontrado: 24009.194442252865
+Tempo Decorrido: 0.10 segundos
+Memoria Atual: 0.68 MB
+Memoria de Pico: 0.68 MB

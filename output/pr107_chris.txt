@@ -1,0 +1,7 @@
+Instancia: pr107
+Algoritmo: Christofides
+Custo Otimo da Instancia: 44303
+Custo Encontrado: 47894.18468460625
+Tempo Decorrido: 0.11 segundos
+Memoria Atual: 0.98 MB
+Memoria de Pico: 0.98 MB

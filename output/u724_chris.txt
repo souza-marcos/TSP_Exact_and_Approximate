@@ -1,0 +1,7 @@
+Instancia: u724
+Algoritmo: Christofides
+Custo Otimo da Instancia: 41910
+Custo Encontrado: 47954.682397622775
+Tempo Decorrido: 45.39 segundos
+Memoria Atual: 25.91 MB
+Memoria de Pico: 27.46 MB

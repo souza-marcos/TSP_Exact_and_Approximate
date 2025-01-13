@@ -1,0 +1,7 @@
+Instancia: u1817
+Algoritmo: Christofides
+Custo Otimo da Instancia: 57201
+Custo Encontrado: 66796.25683960102
+Tempo Decorrido: 197.23 segundos
+Memoria Atual: 88.37 MB
+Memoria de Pico: 172.15 MB

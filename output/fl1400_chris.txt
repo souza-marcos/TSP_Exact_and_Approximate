@@ -1,0 +1,7 @@
+Instancia: fl1400
+Algoritmo: Christofides
+Custo Otimo da Instancia: 20127
+Custo Encontrado: 22834.353425479138
+Tempo Decorrido: 422.17 segundos
+Memoria Atual: 156.95 MB
+Memoria de Pico: 163.04 MB

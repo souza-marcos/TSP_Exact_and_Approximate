@@ -1,0 +1,7 @@
+Instancia: kroA200
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 29368
+Custo Encontrado: 40030.86635119212
+Tempo Decorrido: 0.12 segundos
+Memoria Atual: 0.37 MB
+Memoria de Pico: 2.13 MB

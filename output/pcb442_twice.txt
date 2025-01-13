@@ -1,0 +1,7 @@
+Instancia: pcb442
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 50778
+Custo Encontrado: 69364.90250618651
+Tempo Decorrido: 0.78 segundos
+Memoria Atual: 0.64 MB
+Memoria de Pico: 10.25 MB

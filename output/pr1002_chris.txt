@@ -1,0 +1,7 @@
+Instancia: pr1002
+Algoritmo: Christofides
+Custo Otimo da Instancia: 259045
+Custo Encontrado: 286233.0980252908
+Tempo Decorrido: 105.35 segundos
+Memoria Atual: 60.45 MB
+Memoria de Pico: 61.19 MB

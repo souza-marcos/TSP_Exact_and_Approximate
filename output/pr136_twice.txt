@@ -1,0 +1,7 @@
+Instancia: pr136
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 96772
+Custo Encontrado: 151913.74200165656
+Tempo Decorrido: 0.06 segundos
+Memoria Atual: 0.29 MB
+Memoria de Pico: 0.99 MB

@@ -1,0 +1,7 @@
+Instancia: nrw1379
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 56638
+Custo Encontrado: 79156.2650653691
+Tempo Decorrido: 8.35 segundos
+Memoria Atual: 1.76 MB
+Memoria de Pico: 99.84 MB

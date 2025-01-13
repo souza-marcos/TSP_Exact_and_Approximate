@@ -1,0 +1,7 @@
+Instancia: rat195
+Algoritmo: Christofides
+Custo Otimo da Instancia: 2323
+Custo Encontrado: 2648.0952220519634
+Tempo Decorrido: 0.69 segundos
+Memoria Atual: 2.06 MB
+Memoria de Pico: 2.06 MB

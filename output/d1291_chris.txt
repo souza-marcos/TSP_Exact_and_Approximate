@@ -1,0 +1,7 @@
+Instancia: d1291
+Algoritmo: Christofides
+Custo Otimo da Instancia: 50801
+Custo Encontrado: 57930.365110023486
+Tempo Decorrido: 34.34 segundos
+Memoria Atual: 23.84 MB
+Memoria de Pico: 86.71 MB

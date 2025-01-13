@@ -1,0 +1,7 @@
+Instancia: gil262
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 2378
+Custo Encontrado: 3358.1541767582894
+Tempo Decorrido: 0.22 segundos
+Memoria Atual: 0.43 MB
+Memoria de Pico: 3.61 MB

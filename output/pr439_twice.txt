@@ -1,0 +1,7 @@
+Instancia: pr439
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 107217
+Custo Encontrado: 144624.15787804432
+Tempo Decorrido: 0.76 segundos
+Memoria Atual: 0.65 MB
+Memoria de Pico: 10.13 MB

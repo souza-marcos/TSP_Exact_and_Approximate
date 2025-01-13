@@ -1,0 +1,7 @@
+Instancia: vm1748
+Algoritmo: Christofides
+Custo Otimo da Instancia: 336556
+Custo Encontrado: 376240.89998764714
+Tempo Decorrido: 259.19 segundos
+Memoria Atual: 86.32 MB
+Memoria de Pico: 160.34 MB

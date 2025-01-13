@@ -1,0 +1,7 @@
+Instancia: p654
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 34643
+Custo Encontrado: 49731.89542216019
+Tempo Decorrido: 1.80 segundos
+Memoria Atual: 0.84 MB
+Memoria de Pico: 22.30 MB

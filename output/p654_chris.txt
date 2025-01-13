@@ -1,0 +1,7 @@
+Instancia: p654
+Algoritmo: Christofides
+Custo Otimo da Instancia: 34643
+Custo Encontrado: 39244.70795213078
+Tempo Decorrido: 4.13 segundos
+Memoria Atual: 6.20 MB
+Memoria de Pico: 22.30 MB

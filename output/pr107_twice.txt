@@ -1,0 +1,7 @@
+Instancia: pr107
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 44303
+Custo Encontrado: 54238.03661175547
+Tempo Decorrido: 0.04 segundos
+Memoria Atual: 0.27 MB
+Memoria de Pico: 0.62 MB

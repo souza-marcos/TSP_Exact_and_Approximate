@@ -1,0 +1,7 @@
+Instancia: rd100
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 7910
+Custo Encontrado: 10791.655815950702
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.20 MB
+Memoria de Pico: 0.40 MB

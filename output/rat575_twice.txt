@@ -1,0 +1,7 @@
+Instancia: rat575
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 6773
+Custo Encontrado: 9438.933433360664
+Tempo Decorrido: 1.43 segundos
+Memoria Atual: 0.76 MB
+Memoria de Pico: 17.25 MB

@@ -1,0 +1,7 @@
+Instancia: d198
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 15780
+Custo Encontrado: 19218.43305436619
+Tempo Decorrido: 0.13 segundos
+Memoria Atual: 0.35 MB
+Memoria de Pico: 1.95 MB

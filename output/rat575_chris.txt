@@ -1,0 +1,7 @@
+Instancia: rat575
+Algoritmo: Christofides
+Custo Otimo da Instancia: 6773
+Custo Encontrado: 7802.7491950184985
+Tempo Decorrido: 27.48 segundos
+Memoria Atual: 19.47 MB
+Memoria de Pico: 19.47 MB

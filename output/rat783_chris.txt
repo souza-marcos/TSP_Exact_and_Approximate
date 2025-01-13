@@ -1,0 +1,7 @@
+Instancia: rat783
+Algoritmo: Christofides
+Custo Otimo da Instancia: 8806
+Custo Encontrado: 10102.874531719244
+Tempo Decorrido: 70.57 segundos
+Memoria Atual: 40.21 MB
+Memoria de Pico: 40.21 MB

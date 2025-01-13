@@ -1,0 +1,7 @@
+Instancia: rat99
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 1211
+Custo Encontrado: 1723.2250451508614
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.17 MB
+Memoria de Pico: 0.39 MB

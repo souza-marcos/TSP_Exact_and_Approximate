@@ -1,0 +1,7 @@
+Instancia: lin318
+Algoritmo: Christofides
+Custo Otimo da Instancia: 42029
+Custo Encontrado: 47259.75653586447
+Tempo Decorrido: 3.91 segundos
+Memoria Atual: 6.06 MB
+Memoria de Pico: 6.06 MB

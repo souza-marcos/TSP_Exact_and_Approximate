@@ -1,0 +1,7 @@
+Instancia: u2152
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 64253
+Custo Encontrado: 95076.21583494876
+Tempo Decorrido: 20.97 segundos
+Memoria Atual: 2.50 MB
+Memoria de Pico: 241.74 MB

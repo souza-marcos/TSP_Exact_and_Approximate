@@ -1,0 +1,7 @@
+Instancia: pr124
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 59030
+Custo Encontrado: 74140.95964828487
+Tempo Decorrido: 0.05 segundos
+Memoria Atual: 0.23 MB
+Memoria de Pico: 0.68 MB

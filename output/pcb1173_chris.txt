@@ -1,0 +1,7 @@
+Instancia: pcb1173
+Algoritmo: Christofides
+Custo Otimo da Instancia: 56892
+Custo Encontrado: 63392.440765721745
+Tempo Decorrido: 128.81 segundos
+Memoria Atual: 53.63 MB
+Memoria de Pico: 72.00 MB

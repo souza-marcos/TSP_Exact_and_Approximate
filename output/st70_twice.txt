@@ -1,0 +1,7 @@
+Instancia: st70
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 675
+Custo Encontrado: 873.3514856717352
+Tempo Decorrido: 0.01 segundos
+Memoria Atual: 0.14 MB
+Memoria de Pico: 0.17 MB

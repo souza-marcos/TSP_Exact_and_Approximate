@@ -1,0 +1,7 @@
+Instancia: fl1400
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 20127
+Custo Encontrado: 27915.52347719665
+Tempo Decorrido: 8.79 segundos
+Memoria Atual: 1.76 MB
+Memoria de Pico: 102.65 MB

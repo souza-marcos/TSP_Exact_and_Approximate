@@ -1,0 +1,7 @@
+Instancia: rd100
+Algoritmo: Christofides
+Custo Otimo da Instancia: 7910
+Custo Encontrado: 8905.492431142618
+Tempo Decorrido: 0.22 segundos
+Memoria Atual: 1.11 MB
+Memoria de Pico: 1.11 MB

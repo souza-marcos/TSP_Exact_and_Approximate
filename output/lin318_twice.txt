@@ -1,0 +1,7 @@
+Instancia: lin318
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 42029
+Custo Encontrado: 58145.441917056065
+Tempo Decorrido: 0.37 segundos
+Memoria Atual: 0.49 MB
+Memoria de Pico: 5.35 MB

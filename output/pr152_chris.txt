@@ -1,0 +1,7 @@
+Instancia: pr152
+Algoritmo: Christofides
+Custo Otimo da Instancia: 73682
+Custo Encontrado: 79314.35040722211
+Tempo Decorrido: 0.11 segundos
+Memoria Atual: 0.57 MB
+Memoria de Pico: 1.08 MB

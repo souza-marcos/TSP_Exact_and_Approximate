@@ -1,0 +1,7 @@
+Instancia: fl3795
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 28772
+Custo Encontrado: 39072.83254850032
+Tempo Decorrido: 77.15 segundos
+Memoria Atual: 4.42 MB
+Memoria de Pico: 754.33 MB

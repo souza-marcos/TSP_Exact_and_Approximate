@@ -1,0 +1,7 @@
+Instancia: d198
+Algoritmo: Christofides
+Custo Otimo da Instancia: 15780
+Custo Encontrado: 17316.366440499645
+Tempo Decorrido: 0.67 segundos
+Memoria Atual: 1.36 MB
+Memoria de Pico: 2.31 MB

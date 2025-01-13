@@ -1,0 +1,7 @@
+Instancia: berlin52
+Algoritmo: Christofides
+Custo Otimo da Instancia: 7542
+Custo Encontrado: 8594.034943788782
+Tempo Decorrido: 0.03 segundos
+Memoria Atual: 0.26 MB
+Memoria de Pico: 0.26 MB

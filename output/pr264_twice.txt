@@ -1,0 +1,7 @@
+Instancia: pr264
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 49135
+Custo Encontrado: 66466.8417493333
+Tempo Decorrido: 0.29 segundos
+Memoria Atual: 0.42 MB
+Memoria de Pico: 3.55 MB

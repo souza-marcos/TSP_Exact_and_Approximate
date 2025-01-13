@@ -1,0 +1,7 @@
+Instancia: u2319
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 234256
+Custo Encontrado: 320532.84102777723
+Tempo Decorrido: 30.75 segundos
+Memoria Atual: 2.68 MB
+Memoria de Pico: 280.13 MB

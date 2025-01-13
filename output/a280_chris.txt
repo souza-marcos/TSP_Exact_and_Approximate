@@ -1,0 +1,7 @@
+Instancia: a280
+Algoritmo: Christofides
+Custo Otimo da Instancia: 2579
+Custo Encontrado: 2975.114776582676
+Tempo Decorrido: 2.13 segundos
+Memoria Atual: 4.42 MB
+Memoria de Pico: 4.52 MB

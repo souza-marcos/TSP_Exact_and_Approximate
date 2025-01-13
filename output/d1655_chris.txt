@@ -1,0 +1,7 @@
+Instancia: d1655
+Algoritmo: Christofides
+Custo Otimo da Instancia: 62128
+Custo Encontrado: 70542.33671413544
+Tempo Decorrido: 172.92 segundos
+Memoria Atual: 79.57 MB
+Memoria de Pico: 143.64 MB

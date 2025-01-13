@@ -1,0 +1,7 @@
+Instancia: u1060
+Algoritmo: Christofides
+Custo Otimo da Instancia: 224094
+Custo Encontrado: 249108.58459439888
+Tempo Decorrido: 140.62 segundos
+Memoria Atual: 59.69 MB
+Memoria de Pico: 59.69 MB

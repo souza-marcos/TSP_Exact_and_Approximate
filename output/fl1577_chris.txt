@@ -1,0 +1,7 @@
+Instancia: fl1577
+Algoritmo: Christofides
+Custo Otimo da Instancia: 22249
+Custo Encontrado: 24515.854228438227
+Tempo Decorrido: 86.76 segundos
+Memoria Atual: 53.60 MB
+Memoria de Pico: 130.00 MB

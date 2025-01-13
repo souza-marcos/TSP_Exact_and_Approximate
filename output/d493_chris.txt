@@ -1,0 +1,7 @@
+Instancia: d493
+Algoritmo: Christofides
+Custo Otimo da Instancia: 35002
+Custo Encontrado: 38393.63634401193
+Tempo Decorrido: 14.92 segundos
+Memoria Atual: 13.05 MB
+Memoria de Pico: 13.05 MB

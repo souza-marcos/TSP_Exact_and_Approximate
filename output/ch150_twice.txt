@@ -1,0 +1,7 @@
+Instancia: ch150
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 6528
+Custo Encontrado: 8333.472170089168
+Tempo Decorrido: 0.07 segundos
+Memoria Atual: 0.27 MB
+Memoria de Pico: 1.05 MB

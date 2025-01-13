@@ -1,0 +1,7 @@
+Instancia: u2319
+Algoritmo: Christofides
+Custo Otimo da Instancia: 234256
+Custo Encontrado: 272542.9082569911
+Tempo Decorrido: 1442.82 segundos
+Memoria Atual: 458.39 MB
+Memoria de Pico: 494.20 MB

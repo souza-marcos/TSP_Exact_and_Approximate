@@ -1,0 +1,7 @@
+Instancia: rl1304
+Algoritmo: Twice Around The Tree
+Custo Otimo da Instancia: 252948
+Custo Encontrado: 347782.57034149766
+Tempo Decorrido: 7.48 segundos
+Memoria Atual: 1.55 MB
+Memoria de Pico: 89.17 MB

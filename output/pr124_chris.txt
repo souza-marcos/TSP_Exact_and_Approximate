@@ -1,0 +1,7 @@
+Instancia: pr124
+Algoritmo: Christofides
+Custo Otimo da Instancia: 59030
+Custo Encontrado: 64437.69864117384
+Tempo Decorrido: 0.10 segundos
+Memoria Atual: 0.52 MB
+Memoria de Pico: 0.68 MB

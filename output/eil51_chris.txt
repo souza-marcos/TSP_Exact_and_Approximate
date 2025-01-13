@@ -1,0 +1,7 @@
+Instancia: eil51
+Algoritmo: Christofides
+Custo Otimo da Instancia: 426
+Custo Encontrado: 480.8754669151897
+Tempo Decorrido: 0.05 segundos
+Memoria Atual: 0.33 MB
+Memoria de Pico: 0.33 MB

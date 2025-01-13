@@ -1,0 +1,7 @@
+Instancia: kroA100
+Algoritmo: Christofides
+Custo Otimo da Instancia: 21282
+Custo Encontrado: 23292.98465639025
+Tempo Decorrido: 0.18 segundos
+Memoria Atual: 0.94 MB
+Memoria de Pico: 0.94 MB

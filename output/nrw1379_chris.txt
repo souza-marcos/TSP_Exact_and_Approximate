@@ -1,0 +1,7 @@
+Instancia: nrw1379
+Algoritmo: Christofides
+Custo Otimo da Instancia: 56638
+Custo Encontrado: 63845.070784206226
+Tempo Decorrido: 461.81 segundos
+Memoria Atual: 109.08 MB
+Memoria de Pico: 111.24 MB
