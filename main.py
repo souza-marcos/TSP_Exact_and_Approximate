@@ -1,15 +1,11 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import time
-import tracemalloc
 import heapq
+import time
 from timeout_decorator import timeout, TimeoutError
+import tracemalloc
 
 limDigits = 6
-
-# class ExecutionTimeoutError(Exception):
-#     '''Erro lançado caso o programa demore mais que 30min'''
-#     pass
 
 def readInputFile(filename: str) -> list[tuple[float, float]]:
     ''' Lê um arquivo de entrada no formato .tsp e retorna uma lista de tuplas (x, y) com as posições dos pontos
@@ -109,9 +105,6 @@ def BNB_TSP(graph, timeout=1800):
 
             while pq:
 
-                # if time.time() - start_time > self.timeout:
-                #     raise ExecutionTimeoutError("Execução excedeu o tempo limite de 30 minutos.")
-
                 node = heapq.heappop(pq)
 
                 if node.bound < self.best_cost:
@@ -141,8 +134,7 @@ def BNB_TSP(graph, timeout=1800):
         
     bnb = BranchAndBoundTree(graph, timeout)
     min_cost, optimal_path, elapsed_time, current_memory, peak_memory = bnb.branch_and_bound()
-    return min_cost, optimal_path, elapsed_time, current_memory, peak_memory
-    
+    return min_cost, optimal_path, elapsed_time, current_memory, peak_memory    
 
 @timeout(1800)
 def twiceAroundTree(G : nx.Graph, start: int, toPlot=False):
@@ -302,8 +294,7 @@ data = [
 ("pr264", 49135), 
 ("a280", 2579), 
 ("pr299", 48191), 
-("lin318", 42029), 
-("linhp318", 41345), 
+("lin318", 42029),  
 ("rd400", 15281), 
 ("fl417", 11861), 
 ("pr439", 107217), 
@@ -332,22 +323,23 @@ data = [
 ("rl1889", 316536), 
 ("d2103", 80450), 
 ("u2152", 64253), 
-("u2319", 234256), 
+("u2319", 234256),
 ("pr2392", 378032), 
-("pcb3038", 137694), 
+("pcb3038", 137694),  
 ("fl3795", 28772), 
 ("fnl4461", 182566), 
 ("rl5915", 565530), 
 ("rl5934", 556045), 
 ("rl11849", 923368), 
-("usa13509", 19982889), 
+("usa13509", 19982889),
 ("brd14051", 469445), 
 ("d15112", 1573152), 
 ("d18512", 645488)
 ]
 
-'''Função que Executa o Branch-and-Bound para todas as instâncias do TSP'''
-def bnb_execute():
+def main():
+
+    # Executa os 3 algoritmos para todas as instâncias do TSP
     for tsp_file, optimum in data:
 
         # Leitura dos dados e construção do grafo
@@ -360,20 +352,19 @@ def bnb_execute():
             
             # Salvar os resultados em arquivo de saída
             with open(f'output/{tsp_file}_twice.txt', 'w') as f:
-                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Instancia: {tsp_file}\n")
                 f.write(f"Algoritmo: Twice Around The Tree\n")
-                f.write(f"Custo Ótimo da Instância: {optimum}\n")
+                f.write(f"Custo Otimo da Instancia: {optimum}\n")
                 f.write(f"Custo Encontrado: {cost}\n")
-                # f.write(f"Caminho Encontrado: {optimal_path}\n")
                 f.write(f"Tempo Decorrido: {elapsed_time:.2f} segundos\n")
-                f.write(f"Memória Atual: {current_memory / 10**6:.2f} MB\n")
-                f.write(f"Memória de Pico: {peak_memory / 10**6:.2f} MB\n")
+                f.write(f"Memoria Atual: {current_memory / 10**6:.2f} MB\n")
+                f.write(f"Memoria de Pico: {peak_memory / 10**6:.2f} MB\n")
                 
             print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_twice.txt'}")
 
         except TimeoutError:
             with open(f'output/{tsp_file}_twice.txt', 'w') as f:
-                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Instancia: {tsp_file}\n")
                 f.write("Timeout, 30 minutos foram alcançados\n")
             
             print(f"Timeout ao processar {tsp_file} com Twice Around The Tree")
@@ -384,20 +375,19 @@ def bnb_execute():
             
             # Salvar os resultados em arquivo de saída
             with open(f'output/{tsp_file}_chris.txt', 'w') as f:
-                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Instancia: {tsp_file}\n")
                 f.write(f"Algoritmo: Christofides\n")
-                f.write(f"Custo Ótimo da Instância: {optimum}\n")
+                f.write(f"Custo Otimo da Instancia: {optimum}\n")
                 f.write(f"Custo Encontrado: {cost}\n")
-                # f.write(f"Caminho Encontrado: {optimal_path}\n")
                 f.write(f"Tempo Decorrido: {elapsed_time:.2f} segundos\n")
-                f.write(f"Memória Atual: {current_memory / 10**6:.2f} MB\n")
-                f.write(f"Memória de Pico: {peak_memory / 10**6:.2f} MB\n")
+                f.write(f"Memoria Atual: {current_memory / 10**6:.2f} MB\n")
+                f.write(f"Memoria de Pico: {peak_memory / 10**6:.2f} MB\n")
                 
             print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_chris.txt'}")
 
         except TimeoutError:
             with open(f'output/{tsp_file}_chris.txt', 'w') as f:
-                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Instancia: {tsp_file}\n")
                 f.write("Timeout, 30 minutos foram alcançados\n")
             
             print(f"Timeout ao processar {tsp_file} com Christofides")
@@ -421,24 +411,7 @@ def bnb_execute():
 
         except TimeoutError:
             with open(f'output/{tsp_file}_bnb.txt', 'w') as f:
-                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Instancia: {tsp_file}\n")
                 f.write("Timeout, 30 minutos foram alcançados\n")
             
             print(f"Timeout ao processar {tsp_file} com Branch and Bound")
-
-def main():
-    G = buildGraph(readInputFile("input/berlin52.tsp"))
-    # G = getExampleGraph()
-    C, cost, elapsed_time, current_memory, peak_memory = twiceAroundTree(G, 0, False)
-    print(f"Custo TwiceAroundTree: {cost}")
-    C, cost, elapsed_time, current_memory, peak_memory = christofides(G, 0, False)
-    print(f"Custo Christofides: {cost}")
-    
-    
-main()
-
-'''
-TODO: Branch and Bound
-TODO: Pegar estatísticas
-
-'''
