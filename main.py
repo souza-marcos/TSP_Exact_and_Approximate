@@ -3,12 +3,13 @@ import matplotlib.pyplot as plt
 import time
 import tracemalloc
 import heapq
+from timeout_decorator import timeout, TimeoutError
 
 limDigits = 6
 
-class ExecutionTimeoutError(Exception):
-    '''Erro lançado caso o programa demore mais que 30min'''
-    pass
+# class ExecutionTimeoutError(Exception):
+#     '''Erro lançado caso o programa demore mais que 30min'''
+#     pass
 
 def readInputFile(filename: str) -> list[tuple[float, float]]:
     ''' Lê um arquivo de entrada no formato .tsp e retorna uma lista de tuplas (x, y) com as posições dos pontos
@@ -93,6 +94,7 @@ def BNB_TSP(graph, timeout=1800):
 
             return bound
 
+        @timeout(1800)
         def branch_and_bound(self):
             '''Função que executa o Branch and Bound'''
 
@@ -107,8 +109,8 @@ def BNB_TSP(graph, timeout=1800):
 
             while pq:
 
-                if time.time() - start_time > self.timeout:
-                    raise ExecutionTimeoutError("Execução excedeu o tempo limite de 30 minutos.")
+                # if time.time() - start_time > self.timeout:
+                #     raise ExecutionTimeoutError("Execução excedeu o tempo limite de 30 minutos.")
 
                 node = heapq.heappop(pq)
 
@@ -141,10 +143,14 @@ def BNB_TSP(graph, timeout=1800):
     min_cost, optimal_path, elapsed_time, current_memory, peak_memory = bnb.branch_and_bound()
     return min_cost, optimal_path, elapsed_time, current_memory, peak_memory
     
-    
+
+@timeout(1800)
 def twiceAroundTree(G : nx.Graph, start: int, toPlot=False):
     ''' Algoritmo Twice-Around-The-Tree 2-aproximado
     '''
+    start_time = time.time() # início da coleta de uso de tempo 
+    tracemalloc.start()  # Início da coleta de uso da memória
+
     T = nx.minimum_spanning_tree(G)
 
     if toPlot:
@@ -175,11 +181,19 @@ def twiceAroundTree(G : nx.Graph, start: int, toPlot=False):
         plotGraph(H, subax3, "Hamiltonian Cycle")
         plt.show()
     
-    return H, cost
+    current_memory, peak_memory = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    return H, cost, elapsed_time, current_memory, peak_memory
 
+@timeout(1800)
 def christofides(G : nx.Graph, start: int, toPlot=False):
     ''' Algoritmo de Christofides 1.5-aproximado
     '''
+    start_time = time.time() # início da coleta de uso de tempo 
+    tracemalloc.start()  # Início da coleta de uso da memória
+
     # MST de G
     T = nx.minimum_spanning_tree(G)
     
@@ -228,7 +242,11 @@ def christofides(G : nx.Graph, start: int, toPlot=False):
         plotGraph(C, subax4, "Hamiltonian Cycle")
         plt.show()
     
-    return C, cost
+    current_memory, peak_memory = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    return C, cost, elapsed_time, current_memory, peak_memory
     
 def getExampleGraph():
     ''' Retorna o grafo usado nos slides da aula
@@ -332,17 +350,66 @@ data = [
 def bnb_execute():
     for tsp_file, optimum in data:
 
-        # Ler os dados e construir o grafo
+        # Leitura dos dados e construção do grafo
         positions = readInputFile(f"input/{tsp_file}.tsp")
         G = buildGraph(positions)
-
+        
+        # Execução da função Twice Around The Tree
         try:
-            # Executar a função Branch and Bound
+            C, cost, elapsed_time, current_memory, peak_memory = twiceAroundTree(G, 0, False)
+            
+            # Salvar os resultados em arquivo de saída
+            with open(f'output/{tsp_file}_twice.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Algoritmo: Twice Around The Tree\n")
+                f.write(f"Custo Ótimo da Instância: {optimum}\n")
+                f.write(f"Custo Encontrado: {cost}\n")
+                # f.write(f"Caminho Encontrado: {optimal_path}\n")
+                f.write(f"Tempo Decorrido: {elapsed_time:.2f} segundos\n")
+                f.write(f"Memória Atual: {current_memory / 10**6:.2f} MB\n")
+                f.write(f"Memória de Pico: {peak_memory / 10**6:.2f} MB\n")
+                
+            print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_twice.txt'}")
+
+        except TimeoutError:
+            with open(f'output/{tsp_file}_twice.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write("Timeout, 30 minutos foram alcançados\n")
+            
+            print(f"Timeout ao processar {tsp_file} com Twice Around The Tree")
+        
+        # Execução da função Christofides
+        try:
+            C, cost, elapsed_time, current_memory, peak_memory = christofides(G, 0, False)
+            
+            # Salvar os resultados em arquivo de saída
+            with open(f'output/{tsp_file}_chris.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Algoritmo: Christofides\n")
+                f.write(f"Custo Ótimo da Instância: {optimum}\n")
+                f.write(f"Custo Encontrado: {cost}\n")
+                # f.write(f"Caminho Encontrado: {optimal_path}\n")
+                f.write(f"Tempo Decorrido: {elapsed_time:.2f} segundos\n")
+                f.write(f"Memória Atual: {current_memory / 10**6:.2f} MB\n")
+                f.write(f"Memória de Pico: {peak_memory / 10**6:.2f} MB\n")
+                
+            print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_chris.txt'}")
+
+        except TimeoutError:
+            with open(f'output/{tsp_file}_chris.txt', 'w') as f:
+                f.write(f"Instância: {tsp_file}\n")
+                f.write("Timeout, 30 minutos foram alcançados\n")
+            
+            print(f"Timeout ao processar {tsp_file} com Christofides")
+
+        # Execução da função Branch and Bound
+        try:
             min_cost, optimal_path, elapsed_time, current_memory, peak_memory = BNB_TSP(G)
             
             # Salvar os resultados em arquivo de saída
             with open(f'output/{tsp_file}_bnb.txt', 'w') as f:
                 f.write(f"Instância: {tsp_file}\n")
+                f.write(f"Algoritmo: Branch and Bound\n")
                 f.write(f"Custo Ótimo da Instância: {optimum}\n")
                 f.write(f"Custo Encontrado: {min_cost}\n")
                 f.write(f"Caminho Encontrado: {optimal_path}\n")
@@ -352,19 +419,19 @@ def bnb_execute():
                 
             print(f"Resultados para {tsp_file} salvos em {f'output/{tsp_file}_bnb.txt'}")
 
-        except ExecutionTimeoutError as e:
+        except TimeoutError:
             with open(f'output/{tsp_file}_bnb.txt', 'w') as f:
                 f.write(f"Instância: {tsp_file}\n")
-                f.write(str(e) + "\n")
+                f.write("Timeout, 30 minutos foram alcançados\n")
             
-            print(f"Timeout ao processar {tsp_file}: {e}")
+            print(f"Timeout ao processar {tsp_file} com Branch and Bound")
 
 def main():
-    # G = buildGraph(readInputFile("input/berlin52.tsp"))
-    G = getExampleGraph()
-    C, cost = twiceAroundTree(G, 0, False)
+    G = buildGraph(readInputFile("input/berlin52.tsp"))
+    # G = getExampleGraph()
+    C, cost, elapsed_time, current_memory, peak_memory = twiceAroundTree(G, 0, False)
     print(f"Custo TwiceAroundTree: {cost}")
-    C, cost = christofides(G, 0, False)
+    C, cost, elapsed_time, current_memory, peak_memory = christofides(G, 0, False)
     print(f"Custo Christofides: {cost}")
     
     
