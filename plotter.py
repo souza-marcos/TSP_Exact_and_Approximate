@@ -64,16 +64,73 @@ def plot_comparisons(df):
     timeoutRows = df[df['Timeout'] == True].copy()
     freeTime = df[df['Timeout'] == False].copy()
 
-    # plotting tamanho x tempo
-    fig, ax = plt.subplots()
-    ax.plot(freeTime['Tamanho'], freeTime['Tempo'], label='Tempo de Execução')
-    ax.plot(timeoutRows['Tamanho'], timeoutRows['Tempo'], label='Timeout')
-    ax.set_xlabel('Tamanho')
-    ax.set_ylabel('Tempo (s)')
-    ax.set_title('Tamanho x Tempo de Execução')
-    ax.legend()
-    plt.show()
+    # latex = df[['Instancia', 'Algoritmo', 'Tamanho', 'Custo Encontrado', 'Custo Otimo',  'Tempo', 'Memoria Pico']].copy()
+
+    # # Format float columns
+    # for col in ['Custo Encontrado', 'Custo Otimo', 'Memoria Pico', 'Tempo']:
+    #     latex[col] = latex[col].apply(lambda x: f"{x:.2f}" if not np.isnan(x) else "NaN")
     
+    # # twice around the tree => TAT
+    # latex['Algoritmo'] = latex['Algoritmo'].apply(lambda x: 'TAT' if x == 'Twice Around The Tree' else 'Christofides')
+    
+    # latex['Custo Otimo'] = latex['Custo Otimo'].apply(lambda x: "NaN" if x == "NaN" else int(float(x)))
+
+    # latex = latex.groupby(['Instancia', 'Algoritmo']).first().sort_values(by=['Tamanho']).reset_index()
+   
+    # result = ''
+    # multirow = ''
+    # for i in range(len(latex)):
+    #     line = latex.iloc[i]
+        
+    #     if i % 2 == 0:
+    #         multirow += "\\multirow{2}{4em}{" + line['Instancia'] + "} & "
+    #     else: multirow += "\t\t\t\t& "
+        
+    #     multirow += f"{line['Tamanho']} & {line['Algoritmo']} & {line['Custo Encontrado']} & {line['Custo Otimo']} & {line['Tempo']} & {line['Memoria Pico']} \\\\ \n"
+        
+    #     if i % 2 == 1:
+    #         result += multirow + "\\hline\n"
+    #         multirow = ''
+
+    # with open('output_table.tex', 'w') as f:
+    #     f.write(result)
+ 
+
+    import seaborn as sns
+    sns.set_theme(style="whitegrid")
+
+    # fig, ax = plt.subplots()
+    # sns.scatterplot(x='Tamanho', y='Tempo', data=freeTime, hue='Algoritmo', ax=ax)
+    
+    # Fator de aproximação
+    freeTime['Fator de Aproximacao'] = freeTime['Custo Encontrado'] / freeTime['Custo Otimo']
+    
+    
+    # Set the width and height of the figure
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.scatterplot(x='Tamanho', y='Fator de Aproximacao', data=freeTime, hue='Algoritmo', ax=ax)
+    
+    # Add a median line 
+    median_chris = freeTime[freeTime['Algoritmo'] == 'Christofides']['Fator de Aproximacao'].median()
+    median_tat = freeTime[freeTime['Algoritmo'] == 'Twice Around The Tree']['Fator de Aproximacao'].median()
+    
+    ax.axhline(median_chris, color='orange', linestyle='--')
+    ax.axhline(median_tat, color='blue', linestyle='--')
+    
+    plt.savefig("fator_aproximacao.png", format='png')
+    
+    
+    fix, ax = plt.subplots(figsize=(10, 6))
+    sns.scatterplot(x='Tamanho', y='Tempo', data=freeTime, hue='Algoritmo', ax=ax)
+    sns.lineplot(x='Tamanho', y='Tempo', data=freeTime, hue='Algoritmo', ax=ax)
+    plt.savefig("tempo.png", format='png')
+    
+    # Space consuming
+    
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.scatterplot(x='Tamanho', y='Memoria Pico', data=freeTime, hue='Algoritmo', ax=ax)
+    sns.lineplot(x='Tamanho', y='Memoria Pico', data=freeTime, hue='Algoritmo', ax=ax)
+    plt.savefig("memoria.png", format='png')
     
     
     
