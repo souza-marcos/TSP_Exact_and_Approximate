@@ -415,3 +415,20 @@ def main():
                 f.write("Timeout, 30 minutos foram alcançados\n")
             
             print(f"Timeout ao processar {tsp_file} com Branch and Bound")
+
+def main():
+    G = buildGraph(readInputFile("input/berlin52.tsp"))
+    # G = getExampleGraph()
+    C, cost, elapsed_time, current_memory, peak_memory = twiceAroundTree(G, 0, False)
+    print(f"Custo TwiceAroundTree: {cost}")
+    C, cost, elapsed_time, current_memory, peak_memory = christofides(G, 0, False)
+    print(f"Custo Christofides: {cost}")
+    
+    
+main()
+
+'''
+TODO: Branch and Bound
+TODO: Pegar estatísticas
+
+'''
